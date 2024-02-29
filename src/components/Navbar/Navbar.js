@@ -1,6 +1,4 @@
-import {ReactComponent as CircularLogo} from './logo/logo-navbar-MD.svg';
-import { FaLinkedinIn } from "react-icons/fa6";
-import { FaGithub } from "react-icons/fa";
+import {ReactComponent as CircularLogo} from '../IMG/logo-navbar-MD.svg';
 import { FaMoon } from "react-icons/fa6";
 import { MdSunny } from "react-icons/md";
 
@@ -28,22 +26,28 @@ const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const themeCheck = () => {
     const hamburgermenu = document.getElementById('hamburgermenu');
     const logocircular = document.getElementById('logo-navbar');
+    const logobackground = document.getElementById('logo-background');
+
     const moonicon = document.getElementById('moonicon');
     const sunicon = document.getElementById('sunicon');
 
     if(userTheme === "dark" || (!userTheme && systemTheme)){
         document.documentElement.classList.add('dark');
         logocircular.classList.add('light');
+        logobackground.classList.add('light');
+
         moonicon.style.display = "block";
         sunicon.style.display = "none";
-        hamburgermenu.setAttribute("stroke","black");
+        hamburgermenu.setAttribute("stroke","white");
         return;
     } else {
         document.documentElement.classList.remove('dark');
         logocircular.classList.add('dark');
+        logobackground.classList.add('dark');
+
         sunicon.style.display = "block";
         moonicon.style.display = "none";
-        hamburgermenu.setAttribute("stroke","white");
+        hamburgermenu.setAttribute("stroke","black");
     }
 };
 
@@ -52,12 +56,16 @@ const themeSwtich = () => {
     const moonicon = document.getElementById('moonicon');
     const sunicon = document.getElementById('sunicon');
     const logocircular = document.getElementById('logo-navbar');
+    const logobackground = document.getElementById('logo-background');
+
     const hamburgermenu = document.getElementById('hamburgermenu');
 
     if(document.documentElement.classList.contains('dark')){
         document.documentElement.classList.remove('dark');
         logocircular.classList.add('dark');
         logocircular.classList.remove('light');
+        logobackground.classList.add('dark');
+        logobackground.classList.remove('light');
 
         sunicon.style.display = "block";
         moonicon.style.display = "none";
@@ -68,6 +76,8 @@ const themeSwtich = () => {
         document.documentElement.classList.add('dark');
         logocircular.classList.add('light');
         logocircular.classList.remove('dark');
+        logobackground.classList.add('light');
+        logobackground.classList.remove('dark');
 
         moonicon.style.display = "block";
         sunicon.style.display = "none";
@@ -83,7 +93,7 @@ window.onload = function(event) {
 
 const Navbar = () => {
     return (
-     <ul className="fixed top-0 z-50 bg-navbarbg w-screen h-auto m-0 px-10 py-2 flex flex-row items-center shadow-lg 
+     <ul className="fixed top-0 z-50 bg-navbarbg w-full h-auto m-0 px-10 py-2 flex flex-row items-center shadow-lg 
                   dark:bg-navbardarkbg">
         <li className="flex flex-row justify-around items-center w-auto h-auto p-1">
             <div className='h-full w-20
@@ -104,58 +114,32 @@ const Navbar = () => {
                 max-sm:left-0 
                 dark:bg-navbardarkbg">
             <a href="#" className='text-sm text-black transition ease-in-out 
-            hover:text-hovernav hover:-translate-y-1 hover:scale-110 duration-300
+             hover:-translate-y-1 hover:scale-110 duration-300
             max-lg:text-xs
             dark:text-white'>&lt;Meet me/&gt;</a>
             <a href="#" className='text-sm text-black transition ease-in-out 
-            hover:text-hovernav hover:-translate-y-1 hover:scale-110 duration-300
+             hover:-translate-y-1 hover:scale-110 duration-300
             max-lg:text-xs
             dark:text-white'>&lt;Career/&gt;</a>
             <a href="#" className='text-sm text-black transition ease-in-out 
-            hover:text-hovernav hover:-translate-y-1 hover:scale-110 duration-300
+             hover:-translate-y-1 hover:scale-110 duration-300
             max-lg:text-xs
             dark:text-white'>&lt;Projects/&gt;</a>
             <a href="#" className='text-sm text-black transition ease-in-out 
-            hover:text-hovernav hover:-translate-y-1 hover:scale-110 duration-300
+             hover:-translate-y-1 hover:scale-110 duration-300
             max-lg:text-xs
             dark:text-white'>&lt;Let's talk/&gt;</a>
             <div className='hidden
             max-sm:flex flex-row justify-center gap-5'>
-                <a href='https://www.linkedin.com/in/daniel-manciu-b113581b1/'>
-                <FaLinkedinIn className='text-2xl text-black transition ease-in-out 
-                hover:text-hovernav hover:-translate-y-1 hover:scale-110 duration-300 
-                max-lg:text-xl
-                dark:text-white'/>
-                </a>
-                <a href='https://github.com/D4nutz'>
-                <FaGithub className='text-2xl text-black transition ease-in-out 
-                hover:text-hovernav hover:-translate-y-1 hover:scale-110 duration-300
-                max-lg:text-xl
-                dark:text-white'/>
-                </a>
             </div>
         </li>
-        <li className="flex flex-row justify-evenly items-center w-fit gap-4 h-auto p-1 ml-auto 
-        max-sm:hidden">
-            <a href='https://www.linkedin.com/in/daniel-manciu-b113581b1/'>
-            <FaLinkedinIn className='text-2xl text-black transition ease-in-out
-            hover:text-hovernav hover:-translate-y-1 hover:scale-110 duration-300 
-            max-lg:text-xl
-            dark:text-white'/>
-            </a>
-            <a href='https://github.com/D4nutz'>
-            <FaGithub className='text-2xl text-black transition ease-in-out 
-            hover:text-hovernav hover:-translate-y-1 hover:scale-110 duration-300
-            max-lg:text-xl
-            dark:text-white'/>
-            </a>
-        </li>
-        <li onClick={themeSwtich} className='flex flex-row justify-evenly items-center w-fit ml-4 h-auto p-1'>
+        <li onClick={themeSwtich} className='w-8 h-8 flex flex-row justify-evenly items-center ml-auto p-1
+        max-sm:ml-0'>
             <FaMoon id="moonicon" className="text-2xl text-white absolute transition ease-in-out 
-            hover:text-hovernav hover:-translate-y-1 hover:scale-110 duration-300
+             hover:-translate-y-1 hover:scale-110 duration-300
             max-lg:text-xl" />
             <MdSunny id="sunicon" className="text-2xl text-black absolute transition ease-in-out 
-            hover:text-hovernav hover:-translate-y-1 hover:scale-110 duration-300
+             hover:-translate-y-1 hover:scale-110 duration-300
             max-lg:text-xl" />
         </li>
      </ul>

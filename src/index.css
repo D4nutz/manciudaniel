@@ -12,3 +12,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(109, 109, 109);
 }
+
+.perspective-holo{
+  transform: perspective(150px) rotateX(-20deg);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+
+}
