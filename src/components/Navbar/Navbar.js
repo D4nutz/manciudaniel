@@ -2,6 +2,7 @@ import {ReactComponent as CircularLogo} from '../IMG/logo-navbar-MD.svg';
 import { FaMoon } from "react-icons/fa6";
 import { MdSunny } from "react-icons/md";
 
+
 /* hamburger toggle */
 function hamburgeropen(){
     let togglemenu = document.getElementById('togglemenu');
@@ -93,8 +94,9 @@ window.onload = function(event) {
 
 const Navbar = () => {
     return (
-     <ul className="fixed top-0 z-50 bg-navbarbg w-full h-auto m-0 px-10 py-2 flex flex-row items-center shadow-lg 
-                  dark:bg-navbardarkbg">
+     <ul className="fixed top-0 left-0 z-50 bg-navbarbg w-full px-20 h-auto m-0 py-2 flex flex-row items-center shadow-lg 
+                  dark:bg-navbardarkbg
+                  max-sm:px-10">
         <li className="flex flex-row justify-around items-center w-auto h-auto p-1">
             <div className='h-full w-20
                             max-lg:w-12'>
@@ -113,15 +115,15 @@ const Navbar = () => {
                 max-sm:top-10 max-sm:w-full max-sm:p-4
                 max-sm:left-0 
                 dark:bg-navbardarkbg">
-            <a href="#" className='text-sm text-black transition ease-in-out 
+            <a href="#Home" className='text-sm text-black transition ease-in-out 
              hover:-translate-y-1 hover:scale-110 duration-300
             max-lg:text-xs
             dark:text-white'>&lt;Meet me/&gt;</a>
-            <a href="#" className='text-sm text-black transition ease-in-out 
+            <a href="#Career" className='text-sm text-black transition ease-in-out 
              hover:-translate-y-1 hover:scale-110 duration-300
             max-lg:text-xs
             dark:text-white'>&lt;Career/&gt;</a>
-            <a href="#" className='text-sm text-black transition ease-in-out 
+            <a href="#Projects" className='text-sm text-black transition ease-in-out 
              hover:-translate-y-1 hover:scale-110 duration-300
             max-lg:text-xs
             dark:text-white'>&lt;Projects/&gt;</a>

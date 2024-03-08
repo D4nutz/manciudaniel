@@ -22,9 +22,18 @@ module.exports = {
       'navbarbg': '#89b1ca',
       'navbardarkbg': '#075985',
       'holo': '#00FCFC',
+      'valid': '#13f02d',
+      'idle': '#f08d13',
+      'denied': '#f02213',
+      'phonecamera': '#11163a',
+      'phonecamera-inner': '#05071a',
+      'phonecamera-inner-blue': '#414993',
     },
     boxShadow: {
       'themetoggleshadow': '-2px 3px 6px rgba(0, 0, 0, 0.5), 2px 0px 20px rgba(70, 70, 70, 0.12),inset 14px 18px 19px rgba(70, 70, 70, 0.12)',
+    },
+    backgroundImage: {
+      'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
     },
     extend: {
       keyframes: {

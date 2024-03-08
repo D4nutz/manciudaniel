@@ -5,9 +5,9 @@ import { FaGithub } from "react-icons/fa";
 
 const Home = () => {
     return (
-    <div className='w-full h-full flex flex-row justify-center gap-40 items-center
+    <div className='w-full h-full flex flex-row place-content-between items-center
     max-lg:gap-20
-    max-sm:gap-10 max-sm:flex-col'>
+    max-sm:gap-0 max-sm:place-content-evenly max-sm:flex-col'>
             <div className='w-full h-full absolute left-0 z-1 bg-gradient-to-r from-navbarbg to-transparent
             dark:from-navbardarkbg'>
 
@@ -26,7 +26,7 @@ const Home = () => {
                 <p className='w-full text-sm text-black
                 max-lg:text-xs
                 dark:text-white
-                '>Energetic Frontend Developer with a disciplined engineering background. Challenges are met with unwavering determination; "I can't" only sparks a renewed, relentless effort. Prioritizing discipline and hard work over talent, my focus is on continual improvement and delivering top-tier results.</p>              
+                '>Frontend Developer with over 1 year of exeperience. <br /> I finished a Master's degree in Informatical Applications in Industrial Engineering and a Bachaelor's degree in Industrial Engineering and Robotics. Usually using in my projects React, Angular or Vue and for backend Node.js.</p>              
                 <div className='flex flex-row gap-4 mt-10
                 max-sm:mt-2'>
                     <a href='https://www.linkedin.com/in/daniel-manciu-b113581b1/'>
