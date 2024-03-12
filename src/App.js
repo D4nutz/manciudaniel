@@ -22,7 +22,7 @@ function App() {
       </div>
       <div id='Projects' className='w-full h-dvh overflow-hidden px-20
       max-sm:px-10' >
-        <div className='w-full h-dvh hidden max-sm:block'>
+        <div className='w-full h-dvh'>
           <Projects />
         </div>
       </div>

@@ -7,8 +7,8 @@ import PeugeotNeo from './CodeSnip/PeugeotNeo/PeugeotNeo'
 const Projects = () => {
     useEffect(() => {
         const intervalId = setInterval(showTime, 1000);
-        OpenFolder();
         // Clear the interval when the component is unmounted
+        openapps();
         return () => clearInterval(intervalId);
     }, []);
 
@@ -31,25 +31,37 @@ const Projects = () => {
         }
     }
 
-    function OpenFolder(){
-        const openedfolders = document.querySelectorAll('.open-app');
-        openedfolders.forEach((e) => {
-            e.addEventListener('click', () => {
-                openedfolders.forEach(b => b.classList.remove('active'));
-                e.classList.add('active');
-            });
-        });
+    function openapps(){
+    var peugeot = document.querySelector('.open-peugeot');
+    var peugeotsite = document.querySelector('.peugeot-site');
+    var evobat = document.querySelector('.open-evo');
+    var everymovie = document.querySelector('.open-every');
+    var containerhidden = document.querySelector('.container-main-screen');
+    var containerpadding = document.querySelector('.container-padding');
+    var iframepeugeot = document.getElementById('inlineFrameExample');
+    peugeot.addEventListener('click', () => {
+        peugeotsite.classList.add('flex');
+        peugeotsite.classList.remove('hidden');
+        containerhidden.classList.add('hidden');
+        containerpadding.classList.remove('px-2');
+        iframepeugeot.classList.remove('hidden');
+    });
+
+
+
     }
+
+    
 
     return(
         <div className="w-full h-full flex flex-col items-center justify-evenly">
             <h1 className="w-full text-3xl text-black text-center
                 max-lg:text-xl
                 dark:text-white">&lt;Projects/&gt;</h1>
-            <div className="w-2/12 h-4/6 rounded-3xl border-2 border-inactive relative overflow-hidden
+            <div className="w-1/6 h-4/6 rounded-3xl border-2 border-inactive relative overflow-hidden
             max-sm:w-full max-sm:h-3/4">
                 <CircularLogo className='w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'/>
-                <div className='w-full h-full px-4 py-2 backdrop-blur-sm flex flex-col'>
+                <div className='container-padding w-full h-full px-2 py-2 backdrop-blur-sm flex flex-col'>
                     <div className='w-full h-auto flex flex-row justify-between items-center'>
                         <div id='clock' className='w-auto h-4 text-xs text-white text-nowrap'>
                         </div>
@@ -71,19 +83,19 @@ const Projects = () => {
                             <p className=''>Pick a project</p>
                         </div>
                         <div className='w-full h-auto grid grid-cols-3 gap-2 relative'>
-                            <div className='open-app w-full rounded-xl p-2 gap-1 flex flex-col items-start justify-start cursor-pointer'>
+                            <div className='open-peugeot w-full rounded-xl p-1 gap-1 flex flex-col items-start justify-start cursor-pointer'>
                                 <div className='w-full bg-denied rounded-lg p-1 shadow-[0px_0px_10px_0px_#2d3748]'>
                                         <Movieapp />
                                 </div>
-                                <p className='text-xs text-white text-center'>Every Movie</p>
+                                <p className='w-full text-xs text-white text-center'>Peugeot</p>
                             </div>
-                            <div className='open-app w-full rounded-xl p-2 gap-1 flex flex-col items-start justify-start cursor-pointer'>
+                            <div className='open-evo w-full rounded-xl p-1 gap-1 flex flex-col items-start justify-start cursor-pointer'>
                                 <div className='w-full bg-denied rounded-lg p-1 shadow-[0px_0px_10px_0px_#2d3748]'>
                                     <Movieapp />
                                 </div>
-                                <p className='text-xs text-white text-center'>Every Movie</p>
+                                <p className='text-xs text-white text-center'>Evobat</p>
                             </div>
-                            <div className='open-app w-full rounded-xl p-2 gap-1 flex flex-col items-start justify-start cursor-pointer'>
+                            <div className='open-every w-full rounded-xl p-1 gap-1 flex flex-col items-start justify-start cursor-pointer'>
                                 <div className='w-full bg-denied rounded-lg p-1 shadow-[0px_0px_10px_0px_#2d3748]'>
                                     <Movieapp />
                                 </div>
@@ -91,7 +103,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div className='peugeot-site hidden w-full h-full overflow-auto'>
                         <PeugeotNeo />
                     </div>
                 </div>
