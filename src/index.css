@@ -1,6 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+ /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+}
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 *{
   scroll-behavior: smooth;
@@ -17,6 +30,12 @@ body {
 
 .perspective-holo{
   transform: perspective(150px) rotateX(-20deg);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.keyboard-perspective{
+  transform: perspective(200px) rotateX(-20deg);
   transform-style: preserve-3d;
   backface-visibility: hidden;
 }
