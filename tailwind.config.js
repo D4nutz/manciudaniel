@@ -19,10 +19,11 @@ module.exports = {
       'gray': '#808080',
       'inactive': '#e5e7eb',
       'hovernav': '#38bdf8',
-      'navbarbg': '#89b1ca',
+      'navbarbg': '#9bbcce',
       'navbardarkbg': '#075985',
       'holo': '#00FCFC',
       'valid': '#13f02d',
+      'darkvalid': '#598507',
       'idle': '#f08d13',
       'denied': '#f02213',
       'phonecamera': '#11163a',
@@ -34,6 +35,8 @@ module.exports = {
     },
     backgroundImage: {
       'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      'conic-gradient': 'conic-gradient(orange 64%, blue 64%, blue 81%, black 81%)',
+      'linear-gradient': 'linear-gradient(to left, navbarbg 50%, navbardarkbg 50%) right;'
     },
     extend: {
       keyframes: {
@@ -56,6 +59,10 @@ module.exports = {
         holographicdark: {
           '0%': { boxShadow: '0 -100px 5px rgba(0, 0, 0, .15), 0 -10px 2px rgba(0, 0, 0, .5), 0 -70px 5px rgba(0, 0, 0, .15), 0 -10px 3px rgba(0, 0, 0, .5), 0 -3px 4px rgba(0, 0, 0, .5), 0 -4px 6px rgba(0, 0, 0, .5), 0 -5px 10px rgba(0, 0, 0, .75), 0 -7px 20px rgba(0, 0, 0, .75), 0 -10px 30px rgba(0, 0, 0, .75), 0 -15px 40px rgba(0, 0, 0, .75), 0 -25px 50px rgba(0, 0, 0, .75), 0 -35px 60px rgba(0, 0, 0, .85), 0 -45px 70px rgba(0, 0, 0, .95), 0 -65px 80px rgba(0, 0, 0, 1), 0 -75px 90px rgba(0, 0, 0, 1)'},
           '100%': { boxShadow: '0 -0px 5px rgba(0, 0, 0, .15), 0 -1px 2px rgba(0, 0, 0, .5), 0 -1px 5px rgba(0, 0, 0, .15), 0 -2px 3px rgba(0, 0, 0, .5), 0 -3px 4px rgba(0, 0, 0, .5), 0 -4px 6px rgba(0, 0, 0, .5), 0 -5px 7px rgba(0, 0, 0, .75), 0 -7px 10px rgba(0, 0, 0, .75), 0 -10px 15px rgba(0, 0, 0, .75), 0 -15px 20px rgba(0, 0, 0, .75), 0 -25px 25px rgba(0, 0, 0, .75), 0 -35px 30px rgba(0, 0, 0, .85), 0 -45px 35px rgba(0, 0, 0, .95), 0 -65px 40px rgba(0, 0, 0, 1), 0 -75px 50px rgba(0, 0, 0, 1)'},
+        },
+        iframopen: {
+          '0%': { transform: 'scale(0)' },
+          '100%': { transform: 'scale(1)' } 
         }
       },
       animation: {
@@ -64,6 +71,7 @@ module.exports = {
         float: 'float  1s infinite alternate',
         holographiclight: 'holographiclight 1.5s infinite alternate',
         holographicdark: 'holographicdark 1.5s infinite alternate',
+        iframopen: 'iframopen .5s ease-in-out',
       },
     },
   },

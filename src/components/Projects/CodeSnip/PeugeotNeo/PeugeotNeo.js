@@ -5,7 +5,7 @@ const PeugeotNeo = () => {
         id="inlineFrameExample"
         title="Inline Frame Example"
         src="https://peugeot.neomotors.ro/"
-        className="w-full h-full ">
+        className="w-full h-full iframopen">
         </iframe>
        );
 }

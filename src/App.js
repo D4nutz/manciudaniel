@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Career from './components/Career/Career';
 import Projects from './components/Projects/Projects';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
@@ -24,6 +25,12 @@ function App() {
       max-sm:px-10' >
         <div className='w-full h-dvh'>
           <Projects />
+        </div>
+      </div>
+      <div id='Contact' className='w-full h-dvh overflow-hidden px-20
+      max-sm:px-10' >
+        <div className='w-full h-dvh'>
+          <Contact />
         </div>
       </div>
     </div>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="logo-background" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+<svg id="logo-background" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" class="">
   <defs>
     <style>
-       .dark {
+      .dark {
         fill: #231f20;
       }
       .light {
